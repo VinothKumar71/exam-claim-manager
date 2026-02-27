@@ -23,14 +23,16 @@ export function calculateRemuneration(
     return Math.max(calculated, RULES.SKILLED_MIN_REMUNERATION);
   }
   // Internal or External examiner
-  const capped = Math.min(candidatesExamined, RULES.EXAMINER_MAX_PER_SESSION);
-  const calculated = capped * RULES.EXAMINER_RATE_PER_CANDIDATE;
+  const calculated = candidatesExamined * RULES.EXAMINER_RATE_PER_CANDIDATE;
   return Math.max(calculated, RULES.EXAMINER_MIN_REMUNERATION);
 }
 
-export function calculateAIE(role: ExaminerRole): number {
-  if (role === 'external') {
+export function calculateAIE(role: ExaminerRole, candtsReg: number): number {
+  if (role === 'external' && candtsReg <= 35 ) {
     return RULES.AIE_PER_SESSION;
+  }
+  else if(role === 'external' && candtsReg > 35 && candtsReg <= 70){
+    return RULES.AIE_MAX_PER_DAY;
   }
   return 0;
 }
@@ -61,8 +63,11 @@ export function validateEntry(
   if (candidatesExamined > candidatesRegistered) {
     errors.push('Candidates examined cannot exceed registered');
   }
-  if (role !== 'skilled_assistant' && candidatesExamined > RULES.EXAMINER_MAX_PER_SESSION) {
-    errors.push(`Max ${RULES.EXAMINER_MAX_PER_SESSION} candidates per session for examiners`);
+  if (candidatesRegistered > 70){
+    errors.push('Candidates registered cannot exceed 70 per day')
+  }
+  if (role !== 'skilled_assistant' && candidatesExamined > RULES.EXAMINER_MAX_PER_DAY) {
+    errors.push(`Max ${RULES.EXAMINER_MAX_PER_DAY} candidates per day for examiners`);
   }
 
   return { valid: errors.length === 0, errors };

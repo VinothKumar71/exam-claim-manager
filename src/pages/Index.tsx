@@ -174,7 +174,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="govt-header">
-        <h1 className="text-xl md:text-2xl font-bold tracking-wide">ANNA UNIVERSITY, Chennai - 25</h1>
+        <h1 className="text-xl md:text-2xl font-bold tracking-wide">ANNA UNIVERSITY, CHENNAI - 25</h1>
         <p className="text-xs md:text-sm mt-1 opacity-90">OFFICE OF THE CONTROLLER OF EXAMINATIONS</p>
         <p className="text-[10px] md:text-xs mt-0.5 opacity-75">
           Syndicate approval as per Res.195.6.3 w.e.f. 5 May 2009

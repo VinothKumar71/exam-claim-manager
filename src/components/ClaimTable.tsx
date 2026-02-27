@@ -64,7 +64,7 @@ export const ClaimTable: React.FC<ClaimTableProps> = ({
     (entry: ClaimEntry): ClaimEntry => {
       const updatedRows = entry.rows.map((row) => {
         const rem = calculateRemuneration(row.examinerRole, entry.candidatesExamined);
-        const aie = calculateAIE(row.examinerRole);
+        const aie = calculateAIE(row.examinerRole, entry.candidatesRegistered);
         return { ...row, remuneration: rem, lumpsumAIE: aie, total: rem + aie };
       });
       const otherExp = calculateOtherExpenses(entry.candidatesRegistered);
@@ -268,7 +268,7 @@ export const ClaimTable: React.FC<ClaimTableProps> = ({
                       </td>
                     )}
                     <td className="text-right text-xs px-2 font-semibold">
-                      ₹{row.total + (rowIdx === 0 ? entry.otherExpenses : 0)}
+                      ₹{(row.total)}
                     </td>
                     <td className="p-0.5">
                       {rowIdx === 0 && (
