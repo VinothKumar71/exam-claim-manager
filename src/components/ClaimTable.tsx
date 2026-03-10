@@ -168,9 +168,8 @@ export const ClaimTable: React.FC<ClaimTableProps> = ({
         <tbody>
           {entries.map((entry, entryIdx) => {
             const entryErrors = errors[entry.id] || [];
-            function onAddExaminer(value: string): void {
-              throw new Error('Function not implemented.');
-            }
+
+
 
             return (
               <React.Fragment key={entry.id}>
