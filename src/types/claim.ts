@@ -11,12 +11,12 @@ export interface BankDetails {
 }
 
 export interface ExaminerInfo {
-  id: string;
+  id?: string;
   name: string;
-  designation: string;
-  role: ExaminerRole;
-  collegeCode: string;
-  collegeName: string;
+  designation?: string;
+  role?: ExaminerRole;
+  collegeCode?: string;
+  collegeName?: string;
   contactNumber?: string;
   bankDetails?: BankDetails;
 }

@@ -56,7 +56,7 @@ function createEmptyEntry(): ClaimEntry {
 const Index = () => {
   const [subjects, setSubjects] = useState<SubjectInfo[]>(INITIAL_SUBJECTS);
   const [colleges, setColleges] = useState<CollegeInfo[]>(INITIAL_COLLEGES);
-  const [examiners] = useState<ExaminerInfo[]>(INITIAL_EXAMINERS);
+  const [examiners, setExaminer] = useState<ExaminerInfo[]>(INITIAL_EXAMINERS);
   const [entries, setEntries] = useState<ClaimEntry[]>([createEmptyEntry()]);
   const [paymentMode, setPaymentMode] = useState<PaymentMode>('cash');
   const [bankDetails, setBankDetails] = useState<BankDetails>({
@@ -76,6 +76,16 @@ const Index = () => {
       setSubjects((prev) => [...prev, { code, name: code }]);
     }
   };
+
+  const handleAddExaminer = (code: string) => {
+    if (!examiners.find((s) => s.name === code)) {
+      setExaminer((prev) => [...prev, { name: code }]);
+    }
+  };
+  const handleDeleteExaminer = (code: string) => {
+    setExaminer((prev) => prev.filter((s) => s.code !== code));
+  };
+    
 
   const handleDeleteSubject = (code: string) => {
     setSubjects((prev) => prev.filter((s) => s.code !== code));
@@ -231,6 +241,8 @@ const Index = () => {
           examiners={examiners}
           onAddSubject={handleAddSubject}
           onDeleteSubject={handleDeleteSubject}
+          onAddExaminer={handleAddExaminer}
+          onDeleteExaminer={handleDeleteExaminer}
           onAddCollege={handleAddCollege}
           onDeleteCollege={handleDeleteCollege}
           onSelectExaminer={handleSelectExaminer}

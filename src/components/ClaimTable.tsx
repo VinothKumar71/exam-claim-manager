@@ -19,6 +19,8 @@ interface ClaimTableProps {
   examiners: ExaminerInfo[];
   onAddSubject: (code: string) => void;
   onDeleteSubject: (code: string) => void;
+  onAddExaminer: (code:string) => void;
+  onDeleteExaminer: (code:string)=> void;
   onAddCollege: (code: string) => void;
   onDeleteCollege: (code: string) => void;
   onSelectExaminer: (examiner: ExaminerInfo | undefined) => void;
@@ -54,6 +56,8 @@ export const ClaimTable: React.FC<ClaimTableProps> = ({
   examiners,
   onAddSubject,
   onDeleteSubject,
+  onAddExaminer,
+  onDeleteExaminer,
   onAddCollege,
   onDeleteCollege,
   onSelectExaminer,
@@ -164,6 +168,10 @@ export const ClaimTable: React.FC<ClaimTableProps> = ({
         <tbody>
           {entries.map((entry, entryIdx) => {
             const entryErrors = errors[entry.id] || [];
+            function onAddExaminer(value: string): void {
+              throw new Error('Function not implemented.');
+            }
+
             return (
               <React.Fragment key={entry.id}>
                 {/* 3 rows for External, Internal, Skilled */}
@@ -242,7 +250,9 @@ export const ClaimTable: React.FC<ClaimTableProps> = ({
                           items={getExaminerItems(row.examinerRole)}
                           value={row.examinerName}
                           onChange={(v) => updateRow(entry.id, rowIdx, 'examinerName', v)}
-                          placeholder={ROLE_LABELS[row.examinerRole]}
+                          onAddItem={onAddExaminer}
+                          onDeleteItem={onDeleteExaminer}
+                          placeholder="Examiner"
                         />
                       </div>
                     </td>
