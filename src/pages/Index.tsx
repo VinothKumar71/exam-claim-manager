@@ -82,8 +82,8 @@ const Index = () => {
       setExaminer((prev) => [...prev, { name: code }]);
     }
   };
-  const handleDeleteExaminer = (code: string) => {
-    setExaminer((prev) => prev.filter((s) => s.code !== code));
+  const handleDeleteExaminer = (name: string) => {
+    setExaminer((prev) => prev.filter((s) => s.name !== name));
   };
     
 
