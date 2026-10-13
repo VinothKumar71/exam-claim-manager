@@ -1,7 +1,21 @@
 import { SubjectInfo, CollegeInfo, ExaminerInfo } from '@/types/claim';
 
-export const DEFAULT_CENTRE = 'Anna University Regional Campus Coimbatore';
+export const DEFAULT_CENTRE = 'ANNA UNIVERSITY REGIONAL CAMPUS COIMBATORE';
 export const DEFAULT_CENTRE_CODE = '7100';
+
+export const DEPARTMENTS = [
+  "Computer Science and Engineering",
+  "Artificial Intelligence and Data Science",
+  "Electronics and Communication Engineering",
+  "Electronics Engineering (VLSI Design and Technology)",
+  "Electrical and Electronics Engineering",
+  "Mechanical Engineering",
+  "Master of Business Administration (MBA)",
+  "Master of Business Administration (Business Analytics) – MBA (BA)"
+];
+
+export const SESSIONS = ["NOVEMBER - DECEMBER", "APRIL - MAY"];
+export const YEARS = Array.from({ length: 7 }, (_, i) => (2024 + i).toString());
 
 export const INITIAL_SUBJECTS: SubjectInfo[] = [
   { code: 'HS3151', name: 'Professional English I', department: 'CSE' },
@@ -140,7 +154,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '1',
     name: 'DR. J. PREETHI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -148,7 +162,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '2',
     name: 'DR. N. FAREENA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -156,7 +170,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '3',
     name: 'MR. D. PRABHU',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -164,7 +178,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '4',
     name: 'DR. K. SEETHAPPAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -172,7 +186,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '5',
     name: 'MR. R. BALAMURUGAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -180,7 +194,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '6',
     name: 'DR. R. SURESH KUMAR',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -188,7 +202,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '7',
     name: 'DR. M. YUVARAJU',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -196,7 +210,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '8',
     name: 'DR. S. SARAVANAKUMAR',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -204,7 +218,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '9',
     name: 'DR. R. VIJAYABHASKER',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -212,7 +226,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '10',
     name: 'DR. M. NEWLIN RAJKUMAR',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -220,7 +234,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '11',
     name: 'DR. S. SUMATHI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -228,7 +242,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '12',
     name: 'DR. S. KIRUBADEVI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -236,7 +250,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '13',
     name: 'DR. L. SHEELA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -244,7 +258,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '14',
     name: 'DR. N. KUMARESAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -252,7 +266,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '15',
     name: 'DR. R. GOMATHI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -260,7 +274,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '16',
     name: 'DR. G. JEEVAGAN NAVAUKKARASU LENIN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -268,7 +282,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '17',
     name: 'DR. P. MARIKKANNU',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -276,7 +290,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '18',
     name: 'DR. S. V. MANISEKARAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -284,7 +298,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '19',
     name: 'DR. M. S. PREMAPRIYA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -292,7 +306,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '20',
     name: 'DR. S. SRIVIDHYA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -300,7 +314,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '21',
     name: 'DR. D. SIVAKUMARAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -308,7 +322,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '22',
     name: 'DR. T. SUGANTHALAKSHMI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -316,7 +330,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '23',
     name: 'DR. S. KARTHIKEYAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -324,7 +338,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '24',
     name: 'DR. A. LEELAMANI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -332,7 +346,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '25',
     name: 'DR. S. N. MAHALAKSHMI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -340,7 +354,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '26',
     name: 'DR. P. RENUKADEVI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -348,7 +362,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '27',
     name: 'DR. K. RAJASEKAR',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -356,7 +370,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '28',
     name: 'DR. S. J. SARDHAR BASHA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -364,7 +378,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '29',
     name: 'DR. J. VERNOLD VIVIN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -372,7 +386,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '30',
     name: 'DR. M. KRISHNAKUMAR',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -380,7 +394,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '31',
     name: 'DR. L. BAPITHA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -388,7 +402,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '32',
     name: 'DR. J. LAKSHMI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -396,7 +410,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '33',
     name: 'DR. K. KANTHAVEL',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -404,7 +418,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '34',
     name: 'DR. K. SOORYA PRAKASH',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -412,7 +426,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '35',
     name: 'DR. R. SATHIYA MOORTHY',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -420,7 +434,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '36',
     name: 'DR. M. BALASUBRAMANIAN',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -428,7 +442,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '37',
     name: 'DR. T. BHAGAVATHI PUSHPA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -436,7 +450,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '38',
     name: 'MRS. T. USHARANI',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -444,7 +458,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '39',
     name: 'DR. K. RAJA',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -454,7 +468,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '40',
     name: 'DR. T. ARULDOSS ALBERT VICTOIRE',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -462,7 +476,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '41',
     name: 'DR. P. SEETHALAKSHMI',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -470,7 +484,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '42',
     name: 'DR. S. CHANDRAKUMARMANGALAM',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -478,7 +492,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '43',
     name: 'DR. J. VENKATESH',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -486,7 +500,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '44',
     name: 'DR. M. SARAVANAKUMAR',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -494,7 +508,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '45',
     name: 'DR. M. V. SUBHA',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -502,7 +516,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '46',
     name: 'DR. S. MARSHAL ANTHONI',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -510,7 +524,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '47',
     name: 'DR. M. SAKTHIVEL',
-    designation: 'Associate Professor',
+    designation: 'ASP',
     role: 'internal',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -520,7 +534,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '48',
     name: 'MR. P. RAJAN',
-    designation: 'Lab Assistant',
+    designation: 'PA',
     role: 'skilled_assistant',
     collegeCode: '7100',
     collegeName: 'Anna University Regional Campus Coimbatore',
@@ -528,7 +542,7 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
   {
     id: '49',
     name: 'DR. R. RAJAMON SINGH',
-    designation: 'Assistant Professor',
+    designation: 'AP',
     role: 'external',
     collegeCode: '7104',
     collegeName: 'Christ The King Engineering College',
@@ -545,7 +559,8 @@ export const INITIAL_EXAMINERS: ExaminerInfo[] = [
 ];
 
 export const ROLE_LABELS: Record<string, string> = {
-  external: 'External Examiner',
-  internal: 'Internal Examiner',
+  external: 'External',
+  internal: 'Internal',
   skilled_assistant: 'Skilled Assistant',
+  supervisor: 'Supervisor',
 };
